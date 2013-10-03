@@ -1,0 +1,44 @@
+<!-- Begin Footer -->
+<div class="footer-wrapper">
+  <div class="footer">
+    <div class="one-third">
+      <h3>Search</h3>
+      <form class="searchform" method="get">
+        <input type="text" id="s" name="s" value="Search" onfocus="this.value=''" onblur="this.value='Search'"/>
+      </form>
+    </div>
+    <div class="one-third">
+      <h3>Recent Posts</h3>
+      <ul class="post-list">
+	    {% for post in site.posts limit:3 %}
+        <li>
+          <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+          <div class="meta">{{ post.date | date: "%d %b, %Y" }}</div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="one-third last">
+      <h3>A Little About acts2fellowship</h3>
+      <p>Acts2fellowship is a Christian student group at the University of Minnesota. We meet every week on campus to study the Bible and check out God’s perspective. It’s a safe and fun place to make some friends, think about the big questions in life, and get some answers as we investigate and discover God’s purpose for us. Along the way we also hang out, eat good food, go on awesome outings, study really hard, and just “do college life” together. At acts2fellowship, we try to recreate what we read in Acts chapter 2 of the Bible—ordinary folks forming an extraordinary community—and we invite you to join us!</p>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- End Footer --> 
+<!-- Begin Site Generator -->
+<div class="site-generator-wrapper">
+  <div class="site-generator">
+    <div class="copyright">
+      <p>&copy; 2013 Acts2Fellowship.</p>
+    </div>
+    <ul class="social">
+      <li><a class="rss" href="{{ site.baseurl }}/atom.xml"></a></li>
+      <li><a class="facebook" href="https://www.facebook.com/a2fminnesota"></a></li>
+      <li><a class="flickr" href="http://www.flickr.com/photos/gpminneapolis/collections/72157624281477214/"></a></li>
+      <li><a class="vimeo" href="http://vimeo.com/user4527364"></a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+</div>
+<!-- End Site Generator -->

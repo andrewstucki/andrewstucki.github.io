@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% include headers/video.html %}
+
+{% include posts/head.html %}
+
+	  	<div class="video">
+		    <iframe src="http://player.vimeo.com/video/{{ page.vimeo }}?portrait=0&title=0&byline=0" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+		</div>
+
+{% include posts/body.html %}   
+{% include comments.html %}
+{% include posts/foot.html %}

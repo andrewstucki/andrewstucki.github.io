@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+{% include headers/photo.html %}
+
+{% include posts/head.html %}
+
+		{% if page.gallery %}
+	  	<!-- Begin Slider -->
+		<div class="bannercontainer">
+		  <div class="banner">
+		    <ul>
+		    	{% for item in page.gallery %}
+		      		<li><img src="{{ item }}" alt="{{ page.title }}" /></li>
+		      	{% endfor %}
+		    </ul>
+		    <div class="tp-bannertimer"></div>
+		  </div>
+		</div>
+		{% elsif page.photo %}
+			<img src="{{ page.photo }}" alt="{{ page.title }}" />
+		{% endif %}
+
+{% include posts/body.html %}   
+{% include comments.html %}
+{% include posts/foot.html %}

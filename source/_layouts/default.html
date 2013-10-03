@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>{{page.title}} | acts2fellowship - A Christian fellowship at University of Minnesota</title>
+<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/images/favicon.png" />
+
+{% css_asset_tag global %}
+- /_assets/css/style.css
+- /_assets/css/media-queries.css
+{% endcss_asset_tag %}
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/ie8.css" media="all" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/ie9.css" media="all" />
+<![endif]-->
+{% javascript_asset_tag global %}
+- /_assets/js/jquery-1.7.2.min.js
+- /_assets/js/jquery.fitvids.js
+- /_assets/js/selectnav.js
+- /_assets/js/unslider.js
+- /_assets/js/jquery.autoellipsis-1.0.10.min.js
+{% endjavascript_asset_tag %}
+
+<meta name="robots" content="index,follow,noodp,noydir" />
+<meta name="description" content="a2f is a Christian group on the University of Minnesota campus that shares in God’s love through studying and living out the truths of the Bible. Not only do we learn about the relevancy of the Bible in today's day and age, but we live life together." />
+<meta name="keywords" content="christian fellowship university of minnesota, christian club, umn, u of m, asian american, small home life group, minneapolis st paul area, small home life groups" />
+
+</head>
+
+<body>
+
+{% include header.html %}
+{{ content }}
+{% include footer.html %}
+{% javascript_asset_tag scripts %}
+- /_assets/coffee/scripts.coffee
+{% endjavascript_asset_tag %}
+</body>
+</html>

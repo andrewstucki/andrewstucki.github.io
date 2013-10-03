@@ -1,0 +1,25 @@
+---
+layout: default
+title: Acts2Fellowship - Minnesota
+---
+
+<!-- Begin Slider -->
+<div class="fullwidthbanner-container">
+  <div class="fullwidthbanner">
+    <ul>
+      {% banner_images %}
+    </ul>
+  </div>
+</div>
+<!-- End Slider -->
+
+<!-- Begin Upcoming Events -->
+<!-- JavaScript injection -->
+{% javascript_asset_tag calendar %}
+- /_assets/coffee/calendar.coffee
+{% endjavascript_asset_tag %}
+<div class="upcoming-events">
+</div>
+<!-- End Upcoming Events -->
+
+{% include post_grid.html %}

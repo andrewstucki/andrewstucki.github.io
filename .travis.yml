@@ -1,0 +1,20 @@
+---
+branches:
+  only:
+  - source
+language: ruby
+rvm:
+- 1.9.3
+before_script:
+- git config --global user.name "Andrew Stucki"
+- git config --global user.email "andrew.stucki@gmail.com"
+- export REPO_URL="https://$GH_TOKEN@github.com/$GH_REPO.git"
+- rake setup_github_pages[$REPO_URL]
+script:
+- rake generate
+after_script:
+- rake deploy
+env:
+  global:
+  - GH_REPO="andrewstucki/andrewstucki.github.io"
+  - secure: ""

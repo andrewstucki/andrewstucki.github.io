@@ -1,0 +1,19 @@
+name: Acts2Fellowship - Minnesota
+pygments: true
+paginate: 6
+exclude: 
+    - Gemfile
+    - Gemfile.lock
+baseurl: //andrewstucki.github.io
+search_index: acts2fellowship
+default_post_image: http://farm6.staticflickr.com/5526/9304727064_a3bb17ac8c_o.jpg
+paginated_categories: 
+    - videos
+    - photos
+    - signups
+asset_pipeline:
+    bundle: true
+    compress: true
+    output_path: assets
+    display_path: assets
+    gzip: false

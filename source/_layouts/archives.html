@@ -1,0 +1,27 @@
+---
+layout: default
+title: Archives
+---
+<!-- Begin Wrapper -->
+<div class="wrapper">
+  <div class="intro uppercase center">{{ page.title }}</div>
+  
+  <!-- Begin Container -->
+  <div class="container">
+	
+<div class="archives">
+{% for year_data in page.posts_by_year %}
+<h2 class="archive-year">{{ year_data[0] | date:"%Y" }}</h2>
+{% for month_data in year_data[1] %}
+<h3 class="archive-month" id="{{ month_data[0] | date:"%B" | downcast }}{{ year_data[0] | date:"%Y" }}">{{ month_data[0] | date:"%B" }}</h3>
+  <ul>
+  {% for post in month_data[1] %}
+    <li class="archive-post"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title | truncate:65 }}</a><span>{{ post.date | date:"%B %d, %Y" }}</span></li>
+  {% endfor %}
+  </ul>
+{% endfor %}
+{% endfor %}
+</div>
+
+</div>
+</div>

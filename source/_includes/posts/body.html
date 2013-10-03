@@ -1,0 +1,65 @@
+<!-- Begin Facebook -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=277475812272159";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- End Facebook -->
+<!-- Begin Google+ -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<!-- End Google+ -->
+
+</div>
+      <div class="info">
+        <div class="date">
+            <div class="day">{{ page.date | date: "%d" }}</div>
+            <div class="month">{{ page.date | date: "%b" }}</div>
+            <div class="year">{{ page.date | date: "%Y" }}</div>
+        </div>
+        <ul class="share">
+			<div class="fb-like" data-href="http:{{ site.baseurl }}{{ page.url }}" data-width="72" data-layout="box_count" data-show-faces="false" data-send="false"></div>
+			<div class="g-plusone" data-href="http:{{ site.baseurl }}{{ page.url }}" data-size="tall" ></div>
+        </ul>
+      </div>
+      <div class="post-content">
+        <h1 class="title">{{ page.title }}</h1>
+        <div class="meta">
+		{% for tag in page.tags %}
+			<a href="#">{{ tag }}</a>
+		<span>|</span>
+		{% endfor %}
+	    <span class="comments"><a href="{{ site.baseurl }}{{ page.url }}#disqus_thread"></a></span> </div>
+        {{ content }}
+      </div>
+      <div class="clear"></div>
+      <div class="related">
+        <h3>Related Posts</h3>
+        <ul>
+          {% for post in site.related_posts limit:4 %}
+
+          <li>
+            <div class="featured"><a href="{{ site.baseurl }}{{ post.url }}">
+				{% if post.photo %}
+				<img src="{{ post.photo }}" alt="{{ post.title }}" title="{{ post.title }}" />
+				{% elsif post.gallery %}
+        <img src="{{ post.gallery.first.photo }}" alt="{{ post.title }}">
+        {% else %}
+				<img src="{% default_post_image %}" alt="{{ post.title }}" title="{{ post.title }}"/>
+				{% endif %}
+			</a></div>
+          </li>
+
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <!-- End Post -->
