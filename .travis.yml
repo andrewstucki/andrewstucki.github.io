@@ -17,4 +17,4 @@ after_script:
 env:
   global:
   - GH_REPO="andrewstucki/andrewstucki.github.io"
-  - secure: ""
+  - secure: "UIuun5iWkXPDUO7uYHUwkFYt2FPAoaz8Q/7MXME1cvfU1FTm4AHpwZNtw1V8\nCxzUkCnRA9ISG5Gyu8bNIaahQjSfDFR+C0s1Nde4DqKtb9rNXIeU7pfP2iTH\nzV2G+FPSbG7dIgapAWBvkyZGDoi4NUOPnp0MoqQPktbCKfchspA="
